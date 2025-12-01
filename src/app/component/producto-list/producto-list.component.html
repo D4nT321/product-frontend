@@ -1,0 +1,10 @@
+<h2 class="titulo">Lista de Productos</h2>
+
+<section class="producto-list">
+  @for (producto of productos; track producto.id) {
+    <app-producto-card [producto]="producto" />
+  } @empty {
+    <p class="producto-list__empty">No hay productos para mostrar.</p>
+  }
+</section>
+

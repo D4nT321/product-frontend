@@ -1,0 +1,9 @@
+<article class="producto-card">
+  <img [src]="producto.imagenUrl" [alt]="producto.nombre" loading="lazy">
+  <div class="producto-card__body">
+    <h3>{{ producto.nombre }}</h3>
+    <p class="producto-card__price">${{ producto.precio | number:'1.2-2' }}</p>
+    <p class="producto-card__id">ID: {{ producto.id }}</p>
+  </div>
+</article>
+

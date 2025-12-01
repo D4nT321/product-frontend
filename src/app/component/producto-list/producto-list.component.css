@@ -1,0 +1,22 @@
+
+.titulo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.producto-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.producto-list__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
