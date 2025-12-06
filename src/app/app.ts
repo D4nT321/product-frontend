@@ -1,17 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { ProductoListComponent } from './component/producto-list/producto-list.component';
+import { RouterOutlet } from '@angular/router'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,  
-  imports: [ProductoListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  nombre: string = 'Dante - King';
-
-  cambiarNombre(): void {
-    this.nombre = 'Hell in Cell';
-  }
+  
 }

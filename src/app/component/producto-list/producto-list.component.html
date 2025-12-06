@@ -1,10 +1,16 @@
-<h2 class="titulo">Lista de Productos</h2>
-
-<section class="producto-list">
-  @for (producto of productos; track producto.id) {
-    <app-producto-card [producto]="producto" />
-  } @empty {
-    <p class="producto-list__empty">No hay productos para mostrar.</p>
+<div class="producto-list-container">
+  <h2>Lista de Productos</h2>
+  <div class="productos-acciones">
+    <button class="accion-button" (click)="crearProducto()">Nuevo</button>
+  </div>
+  @if (productos.length === 0) {
+    <h3>No hay productos disponibles.</h3>
+  } @else {
+    <div class="productos-grid">
+      @for (producto of productos; track producto.id) {
+        <app-producto-card [producto]="producto" (eliminarProducto)="onEliminarProducto($event)"></app-producto-card>
+      }
+    </div>
   }
-</section>
+</div> 
 
